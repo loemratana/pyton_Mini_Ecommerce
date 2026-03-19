@@ -1,0 +1,47 @@
+[
+    {
+        "product_id": 1,
+        "name": "Laptop",
+        "price": 1200.0,
+        "stock": 10,
+        "category": "Electronics",
+        "description": "High-performance laptop",
+        "discount": 10
+    },
+    {
+        "product_id": 2,
+        "name": "Smartphone",
+        "price": 800.0,
+        "stock": 20,
+        "category": "Electronics",
+        "description": "Latest smartphone",
+        "discount": 0
+    },
+    {
+        "product_id": 3,
+        "name": "Headphones",
+        "price": 150.0,
+        "stock": 30,
+        "category": "Accessories",
+        "description": "Noise-cancelling",
+        "discount": 0
+    },
+    {
+        "product_id": 4,
+        "name": "Backpack",
+        "price": 60.0,
+        "stock": 15,
+        "category": "Fashion",
+        "description": "Durable backpack",
+        "discount": 0
+    },
+    {
+        "product_id": 5,
+        "name": "Running Shoes",
+        "price": 120.0,
+        "stock": 15,
+        "category": "Fashion",
+        "description": "Comfortable running shoes",
+        "discount": 0
+    }
+]
