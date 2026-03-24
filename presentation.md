@@ -14,12 +14,12 @@ paginate: true
 A complete, Tkinter-based Python E-Commerce system designed with modularity and robust architecture in mind.
 
 **Core Features:**
-- **Authentication:** Secure Login and Registration system for all users.
-- **Product Management:** Admin control for inventory (Add/Update/Delete).
-- **User Roles:** Distinct workflows and permissions for Admins and Customers.
-- **User Management:** Admin tools to create new Admins and view all users.
-- **Shopping Cart & Checkout:** Persistent sessions and order processing.
-- **Data Analytics:** Advanced reporting using **Pandas** and **Matplotlib**.
+- **Authentication:** Secure Login, Registration, and **Password Management**.
+- **Product Management:** Admin inventory control with **Duplicate Name Validation**.
+- **User Roles:** Distinct workflows for Admins and Customers.
+- **Product Visuals:** High-quality grid view with **Star Rating Display**.
+- **Shopping Cart & Checkout:** Manual **Shipping Fee** entry and **Cash Payment** processing.
+- **Data Analytics:** Reporting using **Pandas** and **Matplotlib**.
 
 ---
 
@@ -38,9 +38,9 @@ The application strongly adheres to Object-Oriented Programming principles to en
 **Concept:** Hiding the internal state of an object and requiring all interaction to occur through specialized methods.
 
 **Application in the Project:**
-- **`Product` Class:** Attributes like `__price` and `__stock` are private. Modification happens only via controlled setter methods that validate data.
-- **`ShoppingCart` Class:** The `__items` storage is protected. Logical checks (like stock availability) are performed within the class before any modification.
-- **User Data:** Account credentials like passwords are encapsulated within User objects and persisted securely in `users.txt`.
+- **`Product` Class** (`models/product.py`): Attributes like `__price` and `__stock` are private. Modification is strictly validated.
+- **`ShoppingCart` Class** (`models/cart.py`): Stock availability and item management are encapsulated.
+- **`User` Class** (`models/user.py`): Direct password updates are encapsulated in dedicated methods.
 
 ---
 
@@ -49,11 +49,10 @@ The application strongly adheres to Object-Oriented Programming principles to en
 **Concept:** A mechanism where a new class derives properties and behaviors from an existing base class.
 
 **Application in the Project:**
-- **Base Class `User`:** Defines shared attributes: `user_id`, `name`, `email`, `password`, and `role`.
-- **Derived Classes `Admin` and `Customer`:** 
-  - They inherit all base attributes but implement unique functionality.
-  - **`Customer`**: Focuses on shopping and order history.
-  - **`Admin`**: Gains specialized management tools for products and users.
+- **Base Class `User`** (`models/user.py`): Defines shared attributes for ID, credentials, and roles.
+- **Derived Classes `Admin` and `Customer`** (`models/user.py`): They inherit base attributes but gain specialized implementations:
+  - **`Customer`**: Shopping, reviews, and wishlist.
+  - **`Admin`**: Product stock, category, and user management.
 
 ---
 
@@ -62,20 +61,20 @@ The application strongly adheres to Object-Oriented Programming principles to en
 **Concept:** The ability of different objects to interact using the same interface but with specific implementations.
 
 **Application in the Project:**
-- **`view_products()` Method:** 
+- **`view_products()` Method** (`models/user.py`): 
   - **Admin Implementation:** Shows technical data (ID, Stock, Raw Price).
-  - **Customer Implementation:** Shows marketing data (Name, Discounted Price).
-- **GUI Dynamic Rendering:** The `ProfileTab` dynamically changes its layout. If the logged-in object is an `Admin`, it renders **User Management Tools**; otherwise, it shows only personal info.
+  - **Customer Implementation:** Shows marketing data (Name, Star Ratings).
+- **GUI Dynamic Rendering** (`gui/profile_tab.py`): The `ProfileTab` dynamically changes its layout using `isinstance()` logic.
+  - **Admins** see management tools. 
+  - **Customers** see account settings and password security.
 
 ---
 
 ## 🛡️ Authentication & Security
 
-**New System Features:**
-- **Login GUI:** Validates users against a persistent database (`users.txt`).
-- **Registration Form:** Allows new customers to self-register with automatic ID generation.
-- **Admin Elevation:** Existing Admins can create new Admin accounts, showcasing restricted access control logic.
-- **Session Persistence:** Remembers user carts across sessions using JSON storage.
+- **Security Control:** Prevents duplicate product/category names to ensure data integrity.
+- **Direct Shipping Entry:** Checkout logic supports dynamic shipping fee calculation.
+- **Password Self-Service:** Logged-in users can update their security credentials directly from their profile.
 
 ---
 

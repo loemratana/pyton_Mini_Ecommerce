@@ -4,13 +4,34 @@
         "name": "Admin",
         "email": "admin@shop.com",
         "password": "admin",
-        "role": "Admin"
+        "role": "Admin",
+        "wishlist": [],
+        "status": "Active",
+        "profile_image": "assets\\profile_images\\user_1.jpg"
     },
     {
         "user_id": 2,
         "name": "John Doe",
         "email": "john@example.com",
         "password": "user123",
-        "role": "Customer"
+        "role": "Customer",
+        "wishlist": [
+            5,
+            4,
+            3,
+            2
+        ],
+        "status": "Active",
+        "profile_image": "assets\\profile_images\\user_2.jpg"
+    },
+    {
+        "user_id": 3,
+        "name": "RATANA",
+        "email": "loemratana63@gmail.com",
+        "password": "123456",
+        "role": "Admin",
+        "wishlist": [],
+        "status": "Active",
+        "profile_image": "assets\\profile_images\\user_3.jpg"
     }
 ]

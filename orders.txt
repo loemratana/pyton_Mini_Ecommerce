@@ -13,6 +13,224 @@
         "total": 600.0,
         "status": "Pending",
         "order_date": "2026-03-17 19:07:21",
-        "discount": 0
+        "discount": 0,
+        "payment_method": "Cash",
+        "shipping_address": ""
+    },
+    {
+        "order_id": "39FBE264",
+        "customer_name": "John Doe",
+        "items": [
+            {
+                "product_id": 1,
+                "name": "Laptop",
+                "price": 1080.0,
+                "quantity": 4
+            },
+            {
+                "product_id": 2,
+                "name": "Smartphone",
+                "price": 800.0,
+                "quantity": 3
+            }
+        ],
+        "total": 6720.0,
+        "status": "Paid",
+        "order_date": "2026-03-23 08:30:47",
+        "discount": 0,
+        "payment_method": "Cash",
+        "shipping_address": ""
+    },
+    {
+        "order_id": "87496C24",
+        "customer_name": "John Doe",
+        "items": [
+            {
+                "product_id": 2,
+                "name": "Smartphone",
+                "price": 800.0,
+                "quantity": 1
+            }
+        ],
+        "total": 800.0,
+        "status": "Paid",
+        "order_date": "2026-03-23 08:31:34",
+        "discount": 0,
+        "payment_method": "Cash",
+        "shipping_address": ""
+    },
+    {
+        "order_id": "97FBB676",
+        "customer_name": "John Doe",
+        "items": [
+            {
+                "product_id": 2,
+                "name": "Smartphone",
+                "price": 800.0,
+                "quantity": 1
+            }
+        ],
+        "total": 800.0,
+        "status": "Paid",
+        "order_date": "2026-03-23 08:38:14",
+        "discount": 0,
+        "payment_method": "Credit Card",
+        "shipping_address": ""
+    },
+    {
+        "order_id": "B9877E12",
+        "customer_name": "John Doe",
+        "items": [
+            {
+                "product_id": 5,
+                "name": "Running Shoes",
+                "price": 120.0,
+                "quantity": 14
+            }
+        ],
+        "total": 1680.0,
+        "status": "Paid",
+        "order_date": "2026-03-23 08:42:18",
+        "discount": 0,
+        "payment_method": "Bank Transfer",
+        "shipping_address": ""
+    },
+    {
+        "order_id": "B029995C",
+        "customer_name": "John Doe",
+        "items": [
+            {
+                "product_id": 2,
+                "name": "Smartphone",
+                "price": 800.0,
+                "quantity": 2
+            }
+        ],
+        "total": 1600.0,
+        "status": "Paid",
+        "order_date": "2026-03-23 08:51:15",
+        "discount": 0,
+        "payment_method": "Bank Transfer",
+        "shipping_address": ""
+    },
+    {
+        "order_id": "8785FB3D",
+        "customer_name": "John Doe",
+        "items": [
+            {
+                "product_id": 4,
+                "name": "Backpack",
+                "price": 60.0,
+                "quantity": 8
+            }
+        ],
+        "total": 480.0,
+        "status": "Paid",
+        "order_date": "2026-03-23 09:06:59",
+        "discount": 0,
+        "payment_method": "Cash",
+        "shipping_address": "ppp"
+    },
+    {
+        "order_id": "9FF90242",
+        "customer_name": "John Doe",
+        "items": [
+            {
+                "product_id": 3,
+                "name": "Headphones",
+                "price": 150.0,
+                "quantity": 2
+            }
+        ],
+        "total": 326.0,
+        "status": "Paid",
+        "order_date": "2026-03-23 09:10:37",
+        "discount": 0,
+        "payment_method": "Bank Transfer",
+        "shipping_address": "dfdf"
+    },
+    {
+        "order_id": "583AEFE2",
+        "customer_name": "John Doe",
+        "items": [
+            {
+                "product_id": 4,
+                "name": "Backpack",
+                "price": 60.0,
+                "quantity": 1
+            }
+        ],
+        "total": 69.2,
+        "status": "Paid",
+        "order_date": "2026-03-23 10:52:40",
+        "discount": 0,
+        "payment_method": "Cash",
+        "shipping_address": "yuyui"
+    },
+    {
+        "order_id": "1C2A6145",
+        "customer_name": "John Doe",
+        "items": [
+            {
+                "product_id": 1,
+                "name": "Laptop",
+                "price": 1080.0,
+                "quantity": 1
+            },
+            {
+                "product_id": 2,
+                "name": "Smartphone",
+                "price": 800.0,
+                "quantity": 3
+            }
+        ],
+        "total": 3728.6,
+        "status": "Paid",
+        "order_date": "2026-03-23 15:28:37",
+        "discount": 0,
+        "payment_method": "Cash",
+        "shipping_address": "45"
+    },
+    {
+        "order_id": "702F98BF",
+        "customer_name": "John Doe",
+        "items": [
+            {
+                "product_id": 1,
+                "name": "Laptop",
+                "price": 1080.0,
+                "quantity": 2
+            }
+        ],
+        "total": 2316.2,
+        "status": "Paid",
+        "order_date": "2026-03-23 16:20:53",
+        "discount": 0,
+        "payment_method": "Cash",
+        "shipping_address": "phnom penh"
+    },
+    {
+        "order_id": "D01CE147",
+        "customer_name": "John Doe",
+        "items": [
+            {
+                "product_id": 2,
+                "name": "Smartphone",
+                "price": 800.0,
+                "quantity": 1
+            },
+            {
+                "product_id": 1,
+                "name": "Laptop",
+                "price": 1200.0,
+                "quantity": 2
+            }
+        ],
+        "total": 3202.0,
+        "status": "Paid",
+        "order_date": "2026-03-24 09:16:31",
+        "discount": 0.0,
+        "payment_method": "Cash",
+        "shipping_address": "phnom penh"
     }
 ]

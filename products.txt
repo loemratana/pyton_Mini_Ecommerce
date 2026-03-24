@@ -3,45 +3,90 @@
         "product_id": 1,
         "name": "Laptop",
         "price": 1200.0,
-        "stock": 10,
+        "stock": 1,
         "category": "Electronics",
         "description": "High-performance laptop",
-        "discount": 10
+        "discount": 10.0,
+        "reviews": [
+            {
+                "user": "John Doe",
+                "rating": 5,
+                "comment": "really good "
+            }
+        ],
+        "image": "assets\\product_images\\product_1.jpg"
     },
     {
         "product_id": 2,
         "name": "Smartphone",
         "price": 800.0,
-        "stock": 20,
+        "stock": 9,
         "category": "Electronics",
         "description": "Latest smartphone",
-        "discount": 0
+        "discount": 0.0,
+        "reviews": [
+            {
+                "user": "John Doe",
+                "rating": 5,
+                "comment": "Auto-submitted rating"
+            }
+        ],
+        "image": "assets\\product_images\\product_2.jpg"
     },
     {
         "product_id": 3,
         "name": "Headphones",
         "price": 150.0,
-        "stock": 30,
+        "stock": 28,
         "category": "Accessories",
         "description": "Noise-cancelling",
-        "discount": 0
+        "discount": 0,
+        "reviews": [
+            {
+                "user": "John Doe",
+                "rating": 5,
+                "comment": "Auto-submitted rating"
+            }
+        ],
+        "image": null
     },
     {
         "product_id": 4,
         "name": "Backpack",
         "price": 60.0,
-        "stock": 15,
+        "stock": 7,
         "category": "Fashion",
         "description": "Durable backpack",
-        "discount": 0
+        "discount": 0,
+        "reviews": [
+            {
+                "user": "John Doe",
+                "rating": 4,
+                "comment": "Auto-submitted rating"
+            }
+        ],
+        "image": null
     },
     {
         "product_id": 5,
-        "name": "Running Shoes",
-        "price": 120.0,
-        "stock": 15,
-        "category": "Fashion",
-        "description": "Comfortable running shoes",
-        "discount": 0
+        "name": "Water",
+        "price": 10.0,
+        "stock": 42,
+        "category": "water",
+        "description": "",
+        "discount": 0,
+        "reviews": [],
+        "image": "assets\\product_images\\product_5.jpg"
+    },
+    {
+        "product_id": 6,
+        "name": "Water",
+        "price": 2.0,
+        "stock": 23,
+        "category": "water",
+        "description": "",
+        "discount": 0,
+        "reviews": [],
+        "image": null
     }
 ]

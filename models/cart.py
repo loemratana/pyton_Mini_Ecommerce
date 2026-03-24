@@ -37,12 +37,12 @@ class ShoppingCart:
         return False, "Item not in cart."
 
     def get_total(self):
-        """Calculate total price including discounts"""
+        """Calculate total price"""
         total = 0.0
         for item in self.__items.values():
             product = item["product"]
             qty = item["quantity"]
-            total += product.get_discounted_price() * qty
+            total += product.get_price() * qty
         return total
 
     def get_items(self):

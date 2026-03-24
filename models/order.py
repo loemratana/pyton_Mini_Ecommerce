@@ -1,7 +1,7 @@
 from datetime import datetime
 
 class Order:
-    def __init__(self, order_id, customer_name, items, total, status="Pending", order_date=None, discount=0.0):
+    def __init__(self, order_id, customer_name, items, total, status="Pending", order_date=None, discount=0.0, payment_method="Cash", shipping_address=""):
         self.order_id = order_id
         self.customer_name = customer_name
         self.items = items # list of dicts: {"product_id": ID, "name": str, "price": float, "quantity": int}
@@ -9,6 +9,10 @@ class Order:
         self.status = status
         self.order_date = order_date if order_date else datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         self.discount = discount
+        self.payment_method = payment_method
+        self.shipping_address = shipping_address
+
+
 
     def summary(self, role="Admin"):
         if role == "Admin":
@@ -39,8 +43,12 @@ class Order:
             "total": self.total,
             "status": self.status,
             "order_date": self.order_date,
-            "discount": self.discount
+            "discount": self.discount,
+            "payment_method": self.payment_method,
+            "shipping_address": self.shipping_address
         }
+
+
 
     @classmethod
     def from_dict(cls, data):
@@ -51,5 +59,9 @@ class Order:
             data["total"],
             data.get("status", "Pending"),
             data.get("order_date"),
-            data.get("discount", 0.0)
+            data.get("discount", 0.0),
+            data.get("payment_method", "Cash"),
+            data.get("shipping_address", "")
         )
+
+

@@ -126,3 +126,25 @@ class Analytics:
             plt.close()
             return True
         plt.show()
+
+    def export_to_excel(self, save_path="sales_report.xlsx"):
+        """Exports orders and products data to a multi-sheet Excel file"""
+        try:
+            orders_df = self._get_orders_df()
+            products_df = self._get_products_df()
+            
+            with pd.ExcelWriter(save_path, engine='openpyxl') as writer:
+                if not orders_df.empty:
+                    orders_df.to_excel(writer, sheet_name='Orders', index=False)
+                if not products_df.empty:
+                    products_df.to_excel(writer, sheet_name='Inventory', index=False)
+                
+                # Top Selling Products summary sheet
+                top_selling = self.get_top_selling_products()
+                if not top_selling.empty:
+                    top_selling.to_excel(writer, sheet_name='Top Selling', index=False)
+            
+            return True, f"Report saved to {save_path}"
+        except Exception as e:
+            return False, str(e)
+

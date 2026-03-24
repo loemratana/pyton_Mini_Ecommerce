@@ -1,0 +1,12 @@
+[
+    {
+        "cat_id": 1,
+        "name": "water",
+        "description": "energy drink"
+    },
+    {
+        "cat_id": 2,
+        "name": "Beer",
+        "description": "drinking"
+    }
+]
