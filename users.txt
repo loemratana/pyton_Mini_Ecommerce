@@ -33,5 +33,25 @@
         "wishlist": [],
         "status": "Active",
         "profile_image": "assets\\profile_images\\user_3.jpg"
+    },
+    {
+        "user_id": "4",
+        "name": "RATANA",
+        "email": "loemratana623@gmail.com",
+        "password": "pbkdf2:sha256:600000$kbWLyMphrSwchuTy$75b2934e8320a7a6928a268544e5a745ed5ec02176ccb942f62ad7e21d6a75a0",
+        "role": "Customer",
+        "wishlist": [],
+        "status": "Active",
+        "profile_image": null
+    },
+    {
+        "user_id": "5",
+        "name": "Ratana",
+        "email": "loemratana633@gmail.com",
+        "password": "pbkdf2:sha256:600000$l6ouMAcCQxT2b8Cv$ee1b3280036e0455737212cdbd6981c040b4f1940818d0d94b39399ef813bf3e",
+        "role": "Customer",
+        "wishlist": [],
+        "status": "Active",
+        "profile_image": null
     }
 ]

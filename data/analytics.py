@@ -127,6 +127,48 @@ class Analytics:
             return True
         plt.show()
 
+    def get_dashboard_summary(self):
+        """Returns a comprehensive summary for the admin dashboard"""
+        orders_df = self._get_orders_df()
+        products_df = self._get_products_df()
+        users = self.data_manager.load_users()
+        
+        summary = {
+            'total_revenue': 0.0,
+            'total_orders': 0,
+            'total_products': 0,
+            'total_customers': 0,
+            'status_breakdown': {},
+            'top_products': [],
+            'low_stock_alerts': []
+        }
+        
+        # Low Stock Alerts
+        low_stock_df = self.get_low_stock_products(threshold=10)
+        if not low_stock_df.empty:
+            summary['low_stock_alerts'] = low_stock_df[['product_id', 'name', 'stock']].to_dict('records')
+        
+        if not products_df.empty:
+            summary['total_products'] = len(products_df)
+            
+        summary['total_customers'] = len([u for u in users if u.role == 'Customer'])
+        
+        if not orders_df.empty:
+            summary['total_orders'] = len(orders_df)
+            summary['total_revenue'] = float(orders_df[orders_df['status'] != 'Cancelled']['total'].sum())
+            
+            # Status breakdown
+            status_counts = orders_df['status'].value_counts().to_dict()
+            summary['status_breakdown'] = {str(k): int(v) for k, v in status_counts.items()}
+            
+            # Top products
+            top_df = self.get_top_selling_products()
+            if not top_df.empty:
+                # Convert to list of tuples/lists for JSON serialization
+                summary['top_products'] = top_df[['product_id', 'name', 'quantity']].head(5).values.tolist()
+                
+        return summary
+
     def export_to_excel(self, save_path="sales_report.xlsx"):
         """Exports orders and products data to a multi-sheet Excel file"""
         try:

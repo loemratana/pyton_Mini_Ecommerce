@@ -2,11 +2,19 @@
     {
         "cat_id": 1,
         "name": "water",
-        "description": "energy drink"
+        "description": "energy drink",
+        "image": ""
     },
     {
         "cat_id": 2,
         "name": "Beer",
-        "description": "drinking"
+        "description": "drinking",
+        "image": ""
+    },
+    {
+        "cat_id": "3",
+        "name": "Cambodia",
+        "description": "",
+        "image": "http://localhost:5000/uploads/20260325161715_Screenshot_2026-03-23_154520.png"
     }
 ]
